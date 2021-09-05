@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Zar Atma Uygulaması</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        div#konteynir{
+            width: 1000px;
+        }
+        img{
+            width: 100px;
+            height: 100px;
+        }
+        div#ikincizar{
+            float: left;
+            padding-left: 10px;
+        }
+        div#birincizar{
+            float: left;
+        }
+        div#buton{
+            width: 210px; 
+            text-align:center; 
+            padding-top: 10px
+        }
+    </style>
+    
+</head>
+<body>
+
+    <div id="konteynir">
+        <div id="birincizaralani">
+         <img id="birincizar"src="Resimler/Zarlar/1.jpg">
+        </div> 
+        <div id="ikincizaralani">
+            <img id="ikincizar"src="Resimler/Zarlar/1.jpg">
+        </div>
+    </div>
+    <div id="buton" ><button id="zarat"onclick="zarat()">Zar At</button></div>
+ 
+    
+
+    <script>
+
+
+       function zarat(){
+        var sayi1= Math.ceil(Math.random()*6);
+        var sayi2=Math.ceil(Math.random()*6);
+        console.log(sayi1);
+        console.log(sayi2);
+        var zar1=document.getElementById("birincizar");
+        var zar2=document.getElementById("ikincizar");
+        zar1.src=`Resimler/Zarlar/${sayi1}.jpg`;
+        zar2.src=`Resimler/Zarlar/${sayi2}.jpg`;
+       }
+
+
+
+    </script>
+</body>
+</html>
